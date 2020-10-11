@@ -24,3 +24,4 @@ def myfun(num):
     return myfun2
 myfun2 = myfun(5)
 print(myfun2(78))   #we can access inner function like this
+
