@@ -1,0 +1,36 @@
+.tb{
+    margin: auto;
+}
+h1{
+    text-align: center;
+    font-family: 'GreatVibesRegular';
+   font-weight: normal;
+   font-style: normal;
+
+}
+td{
+    width: 300px;
+    height: 500px;
+    border : 6px solid white;
+}
+
+#one{
+    background:darkturquoise;
+}
+#two{
+    background:palevioletred;
+
+}
+#three{
+    background:forestgreen;
+
+}
+
+#four{
+    background:orange;
+
+}
+
+#five{
+    background:purple;
+}
