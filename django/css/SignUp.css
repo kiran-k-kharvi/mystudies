@@ -1,0 +1,62 @@
+body{
+    background: darkslateblue;
+    margin: 0px;
+    border: 60px solid greenyellow;
+    border-top: 0px;
+   
+}
+section{
+    background: lightsalmon;
+    color: black;
+    
+}
+h1{
+    text-align: center;
+    font-family: 'GreatVibesRegular';
+   font-weight: normal;
+   font-style: normal;
+   font-size: 40px;
+   padding-top: 55px;
+   margin-top: 0px;
+   
+}
+div{
+    font-family: 'odstemplikRegular';
+   font-weight: normal;
+   font-style: italic;
+   font-size: 20px;
+   text-align: center;
+}
+p{
+    padding: 0 190px ;
+}
+h2{
+    text-align: center;
+    font-family: 'GrandHotelRegular';
+   font-weight: normal;
+   font-style: normal;
+
+}
+form{
+    width: 100%;
+}
+.lab{
+  
+    text-align: center;
+}
+#fm{
+    margin: auto;
+    height: 400px;
+}
+input{
+    width: 300px;
+    height: 30px;
+    margin-bottom: 0px;
+}
+#sup{
+    height: 100px;
+    width: 250px;
+    border-radius: 30px;
+    margin-top: 5px;
+    
+}
