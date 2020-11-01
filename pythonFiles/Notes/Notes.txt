@@ -1,0 +1,6 @@
+Here is alternate explanation, probably easier for people with mathematical mind / background - 
+
+log(X,Y) or log of X to the base Y or (ceil of it) is number of times X should be divided by Y till it reduces to 1 or less than 1 (which ever happens earlier), that is why log(X,Y) is number of places(or digits) in base-Y number system to represent X. Binary search (or Y-ary search) takes log(N,2) (or log(N,Y)) because it divides problem of size N( into 2 or Y pieces) repeatedly until problem is trivial (1 element array) - and number of division operations needed to reduce problem of size N to size 1 is log(N,Y). 
+
+Sorting - why n x log(n)....assume or imagine that you have sorted imaginary clone of unsorted array. What you're really doing is performing binary search for each item in unsorted array in its sorted imaginary clone but binary search is to find "sorted index" for an item in unsorted array. You have n items in unsorted array, you're doing binary search for each of n items - so your complexity can not be better than n x log(n).
+̉
