@@ -1,3 +1,4 @@
+
 class A:
     def __init__(self,a):
         self.b = a
@@ -7,3 +8,4 @@ class A:
 
 obj = A(4)
 print(obj.b)
+
