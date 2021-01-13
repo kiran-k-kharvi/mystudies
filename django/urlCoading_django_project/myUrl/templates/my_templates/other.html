@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% extends "my_templates/base.html" %}
+{% load my_cust_filter %}
+<title>{% block my_title %}
+    other
+    {%endblock%}
+</title> 
+<body>
+    {% block my_block %}
+    
+    <h1>WELCOME TO OTHER PAGE</h1>
+    {{mydesc|upper}}
+    <br>
+    {{mydesc|cut:'kiran'}}
+    <br>
+    {{mydesc|sep:'kiran'}}
+    {% endblock %}
+    
+</body>
+</html>
