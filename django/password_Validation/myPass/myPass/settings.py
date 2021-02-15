@@ -13,8 +13,8 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
-TEMP_DIR = Path.joinpath(BASE_DIR,'templates')
+BASE_DIR = Path(__file__).resolve().parent
+TEMPLATES_DIR = Path.joinpath(BASE_DIR,'templates')
 STATIC_DIR = Path.joinpath(BASE_DIR,'static')
 MEDIA_DIR = Path.joinpath(BASE_DIR,'media')
 
@@ -58,7 +58,7 @@ ROOT_URLCONF = 'myPass.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [TEMPLATES_DIR],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -88,9 +88,9 @@ DATABASES = {
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
 PASSWORD_HASHERS = [
-    'django.contrib.auth.hasher.Argon2PasswordHasher',
-    'django.contrib.auth.hasher.BCryptSHA256PasswordHasher',
-    'django.contrib.auth.hasher.BCryptPasswordHasher',
+    'django.contrib.auth.hashers.Argon2PasswordHasher',
+    'django.contrib.auth.hashers.BCryptSHA256PasswordHasher',
+    'django.contrib.auth.hashers.BCryptPasswordHasher',
     'django.contrib.auth.hashers.PBKDF2PasswordHasher',
     'django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher',
 
@@ -102,7 +102,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
     {
         'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
-        'OPTIONS' : {'min_length'}
+        'OPTIONS' : {'min_length':4},
     },
     {
         'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
@@ -118,7 +118,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Kolkata'
 
 USE_I18N = True
 
@@ -137,3 +137,5 @@ STATICFILES_DIR =[
 
 MEDIA_ROOT = MEDIA_DIR
 MEDIA_URL = '/media/'
+
+LOGIN_URL = '/register/login'

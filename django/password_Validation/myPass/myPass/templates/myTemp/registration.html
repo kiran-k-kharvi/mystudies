@@ -1,0 +1,22 @@
+{% extends "myTemp/base.html" %}
+{% load static %}
+{% block mybase %}
+<div class="jumbotron">
+    {% if registered %}
+    <h1>Thank you for Registering</h1>
+
+    {%else%}
+    <h1>Register here!!!</h1>
+    <h3>Fill the form</h3>
+
+    <form enctype="multipart/form-data" method="POST">
+    {% csrf_token %}
+    {{ regForm.as_p }}
+    {{ ppForm.as_p }}
+    <input type="submit" value="Register">
+    {% endif %}
+    </form>
+
+</div>
+
+{% endblock %}

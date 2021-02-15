@@ -1,0 +1,18 @@
+{% extends 'myTemp/base.html' %}
+
+{% block mybase%}
+
+<div class="jumbotron">
+<h1>Please Login</h1>
+
+<form  action="{% url 'myValidPass:myLogin' %}" method="POST">
+    {% csrf_token %}
+    <label for="username">UserName :</label>
+    <input type="text" name="username" placeholder="Enter user name here">
+    <label for="username">Password :</label>
+    <input type="password" name="password">
+    <input type="submit" value="Login">
+</form>
+</div>
+
+{% endblock %}
